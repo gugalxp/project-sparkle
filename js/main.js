@@ -42,6 +42,7 @@ $(function () {
     var dark = '#000';
     var light = '#fff';
 
+
     /***************************
 
     preloader
@@ -54,21 +55,6 @@ $(function () {
         opacity: 1,
     });
 
-    timeline.fromTo(
-        ".mil-animation-1 .mil-h3", {
-            y: "30px",
-            opacity: 0
-        }, {
-            y: "0px",
-            opacity: 1,
-            stagger: 0.4
-        },
-    );
-
-    timeline.to(".mil-animation-1 .mil-h3", {
-        opacity: 0,
-        y: '-30',
-    }, "+=.3");
 
     timeline.fromTo(".mil-reveal-box", 0.1, {
         opacity: 0,
@@ -77,10 +63,13 @@ $(function () {
         x: '-30',
     });
 
-    timeline.to(".mil-reveal-box", 0.45, {
+    // TIME PRELOADER
+
+    timeline.to(".mil-reveal-box", 1, {
         width: "100%",
         x: 0,
     }, "+=.1");
+
     timeline.to(".mil-reveal-box", {
         right: "0"
     });
@@ -488,7 +477,7 @@ $(function () {
             "zoom",
             "fullScreen",
             "close"
-          ],
+        ],
         loop: false,
         protect: true
     });
@@ -925,11 +914,11 @@ $(function () {
         ***************************/
         $('[data-fancybox="gallery"]').fancybox({
             buttons: [
-            "slideShow",
-            "zoom",
-            "fullScreen",
-            "close"
-          ],
+                "slideShow",
+                "zoom",
+                "fullScreen",
+                "close"
+            ],
             loop: false,
             protect: true
         });
@@ -1048,5 +1037,4 @@ $(function () {
         });
 
     });
-
 });
