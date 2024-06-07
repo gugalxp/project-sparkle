@@ -1301,6 +1301,7 @@ menu button
 
 ------------------------------------------- */
 .mil-menu-btn {
+  display: none !important;
   pointer-events: all;
   height: 28px;
   cursor: pointer;
@@ -4234,4 +4235,72 @@ html.is-animating .mil-menu-frame {
   height: 100vh !important;
   background-color: #000;
   position: relative;
+}
+
+.size-title-section-2 {
+  font-size: 38px !important;
+}
+
+.size-description-section-2 {
+  font-size: 20px !important;
+}
+
+.button-sessao-2 {
+  border: none;
+  padding: 1vw 6vh;
+  font-size: 20px;
+  border-radius: 35px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: .5s;
+  background-color: #000;
+  color: #fff;
+  border: 2px solid #fff;
+}
+
+.button-sessao-2:hover {
+  background-color: #fff;
+  color: #000;
+  border: 2px solid #000;
+}
+
+
+.scroll-container {
+  height: 100vh; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.scroll-title {
+  font-size: 3em;
+  margin: 0.5em 0;
+}
+
+.primeiro-texto-efeito, .segundo-texto-efeito, .terceiro-texto-efeito, .quarto-texto-efeito {
+  color: #fff;
+}
+
+
+.app-color {
+  height: 100vh !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.app-color h1 {
+  font-family: 'Lobster', cursive;
+  font-size: 50px;
+  padding: .5em 0;
+}
+
+.app-color .draw-area {
+  background-color: rgb(224, 224, 224);
+}
+
+.app-color .Menu label {
+  font-size: 14px;
 }

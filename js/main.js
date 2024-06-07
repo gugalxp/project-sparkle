@@ -1037,4 +1037,91 @@ $(function () {
         });
 
     });
+
+
+    // Registrando o plugin ScrollTrigger
+    gsap.registerPlugin(ScrollTrigger);
+
+    // Animação para o Texto 1
+    gsap.to(".primeiro-texto-efeito", {
+        x: -1000,
+        scrollTrigger: {
+            trigger: ".primeiro-texto-efeito",
+            start: "top 80%",
+            end: "bottom top",
+            scrub: true
+        }
+    });
+
+    // Animação para o Texto 2
+    gsap.to(".segundo-texto-efeito", {
+        x: 1000,
+        scrollTrigger: {
+            trigger: ".segundo-texto-efeito",
+            start: "top 80%",
+            end: "bottom top",
+            scrub: true
+        }
+    });
+
+    // Animação para o Texto 3
+    gsap.to(".terceiro-texto-efeito", {
+        x: -1000,
+        scrollTrigger: {
+            trigger: ".terceiro-texto-efeito",
+            start: "top 80%",
+            end: "bottom top",
+            scrub: true
+        }
+    });
+
+    // Animação para o Texto 2
+    gsap.to(".quarto-texto-efeito", {
+        x: 1000,
+        scrollTrigger: {
+            trigger: ".quarto-texto-efeito",
+            start: "top 80%",
+            end: "bottom top",
+            scrub: true
+        }
+    });
+    
+});
+document.addEventListener("DOMContentLoaded", function () {
+    const canvas = document.getElementById('canvas');
+    const ctx = canvas.getContext('2d');
+    const brushWidth = document.getElementById('brushWidth');
+
+    let currentColor = "#fc0388";
+
+    canvas.addEventListener('mouseover', function () {
+        canvas.addEventListener('mousemove', draw);
+    });
+
+    canvas.addEventListener('mouseout', function () {
+        canvas.removeEventListener('mousemove', draw);
+    });
+
+    canvas.addEventListener('click', function (e) {
+        switch (currentColor) {
+            case "#fc0388":
+                currentColor = "#fff";
+                break;
+            case "#fff":
+                currentColor = "#fc8803";
+                break;
+            case "#fc8803":
+                currentColor = "#fc0388";
+                break;
+        }
+    });
+
+    function draw(e) {
+        ctx.beginPath();
+        ctx.arc(e.offsetX, e.offsetY, brushWidth.value / .4, 0, Math.PI * 2);
+        ctx.fillStyle = currentColor || red;
+        ctx.globalAlpha = 100;
+        ctx.fill();
+        ctx.closePath();
+    }
 });
